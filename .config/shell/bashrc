@@ -1,0 +1,79 @@
+
+# Load aliases and shortcuts if existent.
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc"
+
+# Enable colors and change prompt:
+force_color_prompt=yes
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        color_prompt=yes
+    else
+        color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+        PS1="\[\e[1m\e[31m\][\[\e[33m\][$?]\@\e[32m\]@\e[34m\]\h \[\e[35m\]\W\[\e[31m\]]\[\e[0m\]\[\e[1m\]\$\[\e[0m\] "
+else
+    PS1='[\u@\h \w]$ '
+fi
+unset color_prompt force_color_prompt
+
+# History in cache directory:
+HISTSIZE=10000000
+SAVEHIST=10000000
+HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/bash/history"
+
+# Basic auto/tab complete:
+if [ -f /etc/bash_completion ]; then
+  . /etc/bash_completion
+fi
+
+# GCC colors syntax
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# Basic aliases
+alias ls='ls --color=auto --group-directories-first'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias l='ls -cFalh --color=auto --group-directories-first'
+
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp -uq)"
+    trap 'rm -f $tmp >/dev/null 2>&1 && trap - HUP INT QUIT TERM PWR EXIT' HUP INT QUIT TERM PWR EXIT
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bind '"\C-o":"lfcd\n"'
+
+bind '"\C-a":"bc -lq\n"'
+
+bind '"\C-f":"cd \"$(dirname \"$(fzf)\")\"\n"'
+
+# Load syntax highlighting; should be last.
+if [ -f /usr/share/bash-completion/completions/git ]; then
+  source /usr/share/bash-completion/completions/git
+fi
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# Don't put duplicate lines or lines starting with space in the history.
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# For setting history len
+# Check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+neofetch
