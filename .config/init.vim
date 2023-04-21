@@ -29,6 +29,7 @@ set nohlsearch
 set clipboard+=unnamedplus
 set showmode
 set ruler
+set nowrap
 set laststatus=2
 set showcmd
 set tabstop=8 softtabstop=8
