@@ -21,14 +21,13 @@ These are the dotfiles deployed by [XARBS](https://www.github.com/xtcedro/XARBS)
 
 These dotfiles are intended to go with numerous suckless programs I use:
 
-- [dwm](https://github.com/lukesmithxyz/dwm) (window manager)
-- [dwmblocks](https://github.com/lukesmithxyz/dwmblocks) (statusbar)
-- [st](https://github.com/lukesmithxyz/st) (terminal emulator)
-- [dmenu](https://github.com/lukesmithxyz/dmenu) (dynamic menu for x)
+- [dwm](https://dwm.suckless.org/) (window manager)
+- [st](https://st.suckless.org/) (terminal emulator)
+- [dmenu](https://tools.suckless.org/dmenu/) (dynamic menu for x)
 
 
-I also recommend trying out
-[mutt-wizard](https://github.com/lukesmithxyz/mutt-wizard), which additionally
+I also recommend trying out Luke Smith's build of Mutt Wizard.
+[Mutt Wizard](https://github.com/lukesmithxyz/mutt-wizard), which additionally
 works with this setup. It gives you an easy-to-install terminal-based email
 client regardless of your email provider. It is integrated into these dotfiles
 as well.
