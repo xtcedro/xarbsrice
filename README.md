@@ -19,11 +19,13 @@ These are the dotfiles deployed by [XARBS](https://www.github.com/xtcedro/XARBS)
 
 ## Usage
 
-These dotfiles are intended to go with numerous suckless programs I use:
+These dotfiles are intended to go with numerous suckless programs I use, all of which are
+Luke Smith's personal builds of suckless program:
 
-- [dwm](https://dwm.suckless.org/) (window manager)
-- [st](https://st.suckless.org/) (terminal emulator)
-- [dmenu](https://tools.suckless.org/dmenu/) (dynamic menu for x)
+- [dwm](https://www.github.com/LukeSmithxyz/dwm/) (window manager)
+- [st](https://www.github.com/LukeSmithxyz/st/) (terminal emulator)
+- [dmenu](https://www.github.com/LukeSmithxyz/dmenu/) (dynamic menu for x)
+- [dwmblocks](https://www.github.com/LukeSmithxyz/dwmblocks/) (statusbar)
 
 
 I also recommend trying out Luke Smith's build of Mutt Wizard.
