@@ -35,7 +35,7 @@ client regardless of your email provider. It is integrated into these dotfiles
 as well.
 
 ## Install these dotfiles
-Clone the gitub repo [XARBS](https://www.github.com/xtcedro/XARBS) to autoinstall everything. 
+Clone the github repo [XARBS](https://www.github.com/xtcedro/XARBS) to autoinstall everything. 
 ..
 Since [XARBS] will be a fork of [LARBS], the installation script will be in the same directory as in the [LARBS]
 ..
