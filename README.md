@@ -19,9 +19,8 @@ These are the dotfiles deployed by [XARBS](https://www.github.com/xtcedro/XARBS)
 
 ## Usage
 
-These dotfiles are intended to go with numerous suckless programs I use, all of which are
-Luke Smith's personal builds of suckless program:
-
+These dotfiles are intended to go with numerous suckless programs I use, some of which are
+Luke Smith's personal builds of suckless progras:
 - [dwm](https://www.github.com/LukeSmithxyz/dwm/) (window manager)
 - [st](https://www.github.com/LukeSmithxyz/st/) (terminal emulator)
 - [dmenu](https://www.github.com/LukeSmithxyz/dmenu/) (dynamic menu for x)
@@ -35,10 +34,6 @@ client regardless of your email provider. It is integrated into these dotfiles
 as well.
 
 ## Install these dotfiles
-Clone the github repo [XARBS](https://www.github.com/xtcedro/XARBS) to autoinstall everything. 
-..
-Since [XARBS] will be a fork of [LARBS], the installation script will be in the same directory as in the [LARBS]
-..
 
 ## Default Desktop Artwork
 Particles of the Standard Model of particle physics - [Image: Daniel Dominguez/CERN](https://cds.cern.ch/images/OPEN-PHO-CHART-2015-001-1/file?size=large)
