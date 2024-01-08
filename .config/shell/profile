@@ -13,8 +13,8 @@ unsetopt PROMPT_SP 2>/dev/null
 
 # Default programs:
 export EDITOR="nvim"
-export TERMINAL="xfce4-terminal"
-export TERMINAL_PROG="xfce4-terminal"
+export TERMINAL="st"
+export TERMINAL_PROG="st"
 export BROWSER="chromium-browser"
 
 # Change the default crypto/weather monitor sites.
@@ -77,3 +77,4 @@ export _JAVA_AWT_WM_NONREPARENTING=1      # Fix for Java applications in dwm
 
 # Switch escape and caps if tty and no passwd required:
 sudo -n loadkeys "$XDG_DATA_HOME/larbs/ttymaps.kmap" 2>/dev/null
+neofetch
