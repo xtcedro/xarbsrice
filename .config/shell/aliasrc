@@ -51,7 +51,9 @@ alias \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
-	z="zathura"
+	z="zathura" \
+	sso="ssh -i $KEY admin@okdevs.xyz" \
+	upg="apt update -yy && apt dist-upgrade -yy && apt full-upgrade -yy"
 
 alias \
 	lf="lfub" \
