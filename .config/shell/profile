@@ -46,8 +46,6 @@ export ELECTRUMDIR="$XDG_DATA_HOME/electrum"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 
-# Path to ssh key
-export KEY="$HOME/AGE_OF_CREATION/ascii_files/data/keys/truecrashcourse.pem" \
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
