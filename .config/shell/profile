@@ -3,10 +3,9 @@
 
 # Profile file, runs on login. Environmental variables are set here.
 
-#adds local bin directory to path
-[ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin" 
+# Adds local bin directory to path 
+export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 
-unsetopt PROMPT_SP 2>/dev/null
 
 # Default programs:
 export EDITOR="nvim"
